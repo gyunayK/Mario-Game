@@ -14,12 +14,13 @@ const scoreCounter = document.createElement("h1");
 let score = 0;
 body.style.backgroundColor = "black";
 body.style.color = "white";
-scoreCounter.textContent = `Score: ${score}`;
+scoreCounter.textContent = `Luigi's: ${score}`;
 body.appendChild(scoreCounter);
-
+scoreCounter.style.textAlign = "center"
+scoreCounter.style.paddingTop = '50px'
 const init = () => {
   const footStep = new Audio("./audio/smw_footstep.wav");
-  const coinSound = new Audio("./audio/smw_coin.wav");
+  const coinSound = new Audio("./audio/luigi.wav");
   moveCoin();
   const cunt = document.querySelector("img");
   console.dir(cunt);
@@ -49,7 +50,7 @@ const init = () => {
       coinSound.play();
 
       ++score;
-      scoreCounter.textContent = `Score: ${score}`;
+      scoreCounter.textContent = `Luigi's: ${score}`;
     }
   });
 };
