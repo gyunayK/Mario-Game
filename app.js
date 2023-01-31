@@ -19,13 +19,11 @@ body.appendChild(scoreCounter);
 scoreCounter.style.textAlign = "center"
 scoreCounter.style.paddingTop = '150px'
 const init = () => {
-  const footStep = new Audio("./audio/smw_footstep.wav");
-  const coinSound = new Audio("./audio/luigi.wav");
-  const lugiCry = new Audio("./audio/luigi_cry.wav");
+  const footStep = new Audio("./audio/smw_footstep.wav")
+  const coinSound = new Audio("./audio/luigi.wav")
+  const lugiCry = new Audio("./audio/luigi_cry.wav")
   moveCoin();
-  const cunt = document.querySelector("img");
-  console.dir(cunt);
-
+  
   window.addEventListener("keydown", function (e) {
     if (e.key === "ArrowDown" || e.key === "Down") {
       footStep.play();

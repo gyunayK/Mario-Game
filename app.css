@@ -15,3 +15,6 @@ img {
     width: 80px;
 }
 
+body{
+    background-image: ('./Mario-Game/audio/img/map.jpg');
+}
