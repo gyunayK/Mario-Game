@@ -17,10 +17,11 @@ body.style.color = "white";
 scoreCounter.textContent = `Luigi's: ${score}`;
 body.appendChild(scoreCounter);
 scoreCounter.style.textAlign = "center"
-scoreCounter.style.paddingTop = '50px'
+scoreCounter.style.paddingTop = '150px'
 const init = () => {
   const footStep = new Audio("./audio/smw_footstep.wav");
   const coinSound = new Audio("./audio/luigi.wav");
+  const lugiCry = new Audio("./audio/luigi_cry.wav");
   moveCoin();
   const cunt = document.querySelector("img");
   console.dir(cunt);
@@ -47,7 +48,12 @@ const init = () => {
 
     if (isTouching(avatar, coin)) {
       moveCoin();
-      coinSound.play();
+       coinSound.play();
+     
+
+      setTimeout(function(){ 
+        lugiCry.play(); 
+        }, 700)
 
       ++score;
       scoreCounter.textContent = `Luigi's: ${score}`;
