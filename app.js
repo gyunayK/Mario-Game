@@ -53,7 +53,7 @@ const init = () => {
 
       setTimeout(function(){ 
         lugiCry.play(); 
-        }, 700)
+        }, 500)
 
       ++score;
       scoreCounter.textContent = `Luigi's: ${score}`;
